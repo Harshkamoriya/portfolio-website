@@ -118,7 +118,7 @@ export function Hero() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap content-end gap-x-5 gap-y-2 md:col-span-7 md:justify-end">
+            <div className="flex flex-wrap content-end gap-x-5 gap-y-2 md:col-span-6 md:justify-end">
               {tags.map((t, i) => (
                 <span key={t} className="font-mono text-[11px] tracking-[0.15em] text-muted-foreground">
                   <span className="text-faint">[{String(i).padStart(2, "0")}]</span> {t}
