@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import photo from "@/assets/harsh.png.asset.json";
+import { Portrait } from "./Portrait";
 
 const nodes = [
   { id: "api", x: 80, y: 90, label: "API_GATEWAY" },
