@@ -80,7 +80,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,var(--signal-dim),transparent_55%)] opacity-60" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-      <div className="absolute right-0 top-[12%] h-[70%] w-full opacity-40 md:w-[62%] md:opacity-100 animate-fade" style={{ animationDelay: "0.6s" }}>
+      <div className="absolute right-0 top-[12%] h-[70%] w-full opacity-40 md:w-[52%] md:opacity-75 animate-fade" style={{ animationDelay: "0.6s" }}>
         <SystemViz />
       </div>
 
