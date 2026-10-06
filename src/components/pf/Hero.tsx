@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import photo from "@/assets/harsh.png.asset.json";
 
 const nodes = [
   { id: "api", x: 80, y: 90, label: "API_GATEWAY" },
@@ -107,10 +108,16 @@ export function Hero() {
             ))}
           </h1>
           <div className="mt-10 grid gap-8 md:grid-cols-12 animate-fade" style={{ animationDelay: "0.8s" }}>
-            <p className="max-w-md text-lg leading-snug text-muted-foreground md:col-span-5">
+            <div className="flex items-start gap-5 md:col-span-5">
+            <figure className="relative w-16 shrink-0 border border-border bg-surface p-1 shadow-[0_0_40px_-12px_var(--signal)] md:w-20">
+              <img src={photo.url} alt="Harsh Kamoriya" width={80} height={106} decoding="async" className="aspect-[3/4] w-full object-cover object-[50%_25%]" />
+              <figcaption className="absolute -bottom-4 left-0 font-mono text-[9px] tracking-[0.15em] text-faint">FIG.01</figcaption>
+            </figure>
+            <p className="max-w-md text-lg leading-snug text-muted-foreground">
               <span className="text-foreground">Harsh Kamoriya</span> — software engineer building backend systems,
               distributed infrastructure and AI-powered products.
             </p>
+            </div>
             <div className="flex flex-wrap content-end gap-x-5 gap-y-2 md:col-span-7 md:justify-end">
               {tags.map((t, i) => (
                 <span key={t} className="font-mono text-[11px] tracking-[0.15em] text-muted-foreground">
