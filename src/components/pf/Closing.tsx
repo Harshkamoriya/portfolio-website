@@ -46,7 +46,7 @@ const chains = [
 
 export function Constellation() {
   const [c, setC] = useState(0);
-  const active = chains[c].p;
+  const active = chains[c]!.p;
   return (
     <section className="border-y border-border bg-surface">
       <div className="mx-auto grid max-w-[1600px] gap-10 px-6 py-32 md:grid-cols-12 md:px-10">
@@ -180,7 +180,7 @@ export function Contact() {
         <div>
           <div className="grid border-t border-border md:grid-cols-4">
             {links.map(([l, h]) => (
-              <a key={l} href={h} target={h.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="group flex items-center justify-between border-b border-border py-6 text-2xl transition-colors hover:text-signal md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0">
+              <a key={l} href={h} target={h?.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="group flex items-center justify-between border-b border-border py-6 text-2xl transition-colors hover:text-signal md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0">
                 {l}
                 <span className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
               </a>

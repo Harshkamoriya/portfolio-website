@@ -12,7 +12,7 @@ const layers = [
 
 export function Architecture() {
   const [a, setA] = useState(4);
-  const L = layers[a];
+  const L = layers[a]!;
   return (
     <section id="systems" className="relative mx-auto max-w-[1600px] px-6 py-40 md:px-10">
       <div className="mb-20 grid gap-8 md:grid-cols-12">
