@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/pf/Nav";
 import { Hero } from "@/components/pf/Hero";
+import { IdentityReveal } from "@/components/pf/IdentityReveal";
 import { Signal, Engineer } from "@/components/pf/Signal";
 import { Mintzy } from "@/components/pf/Mintzy";
 import { Architecture } from "@/components/pf/Architecture";
@@ -26,6 +27,7 @@ function Index() {
     <main className="overflow-x-clip">
       <Nav />
       <Hero />
+      <IdentityReveal />
       <Signal />
       <Engineer />
       <Mintzy />

@@ -31,8 +31,9 @@ export function Portrait() {
   return (
     <figure
       ref={ref}
+      id="hero-portrait"
       className="relative w-24 shrink-0 origin-bottom-left will-change-transform md:w-40"
-      style={{ transform: "translateY(calc(var(--p, 0) * -28px)) scale(calc(1 + var(--p, 0) * 0.14))" }}
+      style={{ transition: "opacity .2s" }}
     >
       <span className={`${mark} -left-1.5 -top-1.5 border-l border-t`} />
       <span className={`${mark} -right-1.5 -top-1.5 border-r border-t`} />
@@ -46,7 +47,7 @@ export function Portrait() {
           height={213}
           decoding="async"
           className="aspect-[3/4] w-full object-cover object-[50%_22%]"
-          style={{ filter: "grayscale(calc(0.45 - var(--p, 0) * 0.45)) contrast(1.05)" }}
+          style={{ filter: "grayscale(0.45) contrast(1.05)" }}
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
         <span className="absolute bottom-2 left-2 font-mono text-[9px] tracking-[0.15em] text-foreground/80">FIG.01</span>
