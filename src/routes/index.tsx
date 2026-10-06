@@ -1,24 +1,41 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/pf/Nav";
+import { Hero } from "@/components/pf/Hero";
+import { Signal, Engineer } from "@/components/pf/Signal";
+import { Mintzy } from "@/components/pf/Mintzy";
+import { Architecture } from "@/components/pf/Architecture";
+import { Projects } from "@/components/pf/Projects";
+import { Philosophy, Constellation, DSA, Leadership, Contact } from "@/components/pf/Closing";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Harsh Kamoriya — Systems that don't break under load" },
+      { name: "description", content: "Software engineer building backend systems, distributed infrastructure and AI-powered products. 18× faster pipelines, 1947 LeetCode." },
+      { property: "og:title", content: "Harsh Kamoriya — Systems that don't break under load" },
+      { property: "og:description", content: "Backend, distributed systems and AI engineering — told as case studies, not bullet points." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="overflow-x-clip">
+      <Nav />
+      <Hero />
+      <Signal />
+      <Engineer />
+      <Mintzy />
+      <Architecture />
+      <Projects />
+      <Philosophy />
+      <Constellation />
+      <DSA />
+      <Leadership />
+      <Contact />
+    </main>
   );
 }
