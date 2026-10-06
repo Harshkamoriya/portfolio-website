@@ -42,7 +42,7 @@ const stack = ["DOCKER", "AWS FARGATE", "DISTRIBUTED QUEUES", "REDIS", "FASTAPI"
 export function Mintzy() {
   const { ref, p } = useScrollProgress<HTMLDivElement>();
   const idx = Math.min(stages.length - 1, Math.floor(p * stages.length));
-  const s = stages[idx];
+  const s = stages[idx]!;
   return (
     <section className="relative border-y border-border bg-surface">
       <div className="mx-auto max-w-[1600px] px-6 pt-32 md:px-10">
