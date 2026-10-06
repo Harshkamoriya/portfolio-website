@@ -67,7 +67,7 @@ export function Constellation() {
         <div className="relative aspect-[4/3] md:col-span-8 grid-bg">
           <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
             {active.slice(1).map((t, i) => {
-              const a = tech[active[i]], b = tech[t];
+              const a = tech[active[i]!]!, b = tech[t]!;
               return <line key={c + t} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="var(--signal)" strokeWidth="0.25" vectorEffect="non-scaling-stroke" className="animate-dash" style={{ strokeWidth: 1.5 }} />;
             })}
           </svg>

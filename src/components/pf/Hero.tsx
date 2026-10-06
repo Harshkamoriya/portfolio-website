@@ -16,7 +16,7 @@ const edges: [string, string][] = [
 ];
 const pos = Object.fromEntries(nodes.map((n) => [n.id, n]));
 const path = (a: string, b: string) => {
-  const A = pos[a], B = pos[b];
+  const A = pos[a]!, B = pos[b]!;
   const mx = (A.x + B.x) / 2;
   return `M${A.x},${A.y} C${mx},${A.y} ${mx},${B.y} ${B.x},${B.y}`;
 };
