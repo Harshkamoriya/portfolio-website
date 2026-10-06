@@ -108,15 +108,15 @@ export function Hero() {
             ))}
           </h1>
           <div className="mt-10 grid gap-8 md:grid-cols-12 animate-fade" style={{ animationDelay: "0.8s" }}>
-            <div className="flex items-start gap-5 md:col-span-5">
-            <figure className="relative w-16 shrink-0 border border-border bg-surface p-1 shadow-[0_0_40px_-12px_var(--signal)] md:w-20">
-              <img src={photo.url} alt="Harsh Kamoriya" width={80} height={106} decoding="async" className="aspect-[3/4] w-full object-cover object-[50%_25%]" />
-              <figcaption className="absolute -bottom-4 left-0 font-mono text-[9px] tracking-[0.15em] text-faint">FIG.01</figcaption>
-            </figure>
-            <p className="max-w-md text-lg leading-snug text-muted-foreground">
-              <span className="text-foreground">Harsh Kamoriya</span> — software engineer building backend systems,
-              distributed infrastructure and AI-powered products.
-            </p>
+            <div className="flex items-end gap-5 md:col-span-6 md:gap-7">
+              <Portrait />
+              <div className="pb-1">
+                <div className="label mb-3 hidden md:block">OPERATOR · H.KAMORIYA</div>
+                <p className="max-w-md text-lg leading-snug text-muted-foreground">
+                  <span className="text-foreground">Harsh Kamoriya</span> — software engineer building backend systems,
+                  distributed infrastructure and AI-powered products.
+                </p>
+              </div>
             </div>
             <div className="flex flex-wrap content-end gap-x-5 gap-y-2 md:col-span-7 md:justify-end">
               {tags.map((t, i) => (
