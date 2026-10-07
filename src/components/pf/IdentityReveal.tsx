@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import photo from "@/assets/harsh.png.asset.json";
+import photo from "@/assets/harsh.png";
 
 const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const ease = (t: number) => 1 - Math.pow(1 - t, 3);
@@ -99,7 +99,7 @@ export function IdentityReveal() {
   if (!motion) {
     return (
       <section aria-label="Harsh" className="mx-auto flex max-w-[1400px] flex-col items-start gap-6 px-5 py-24 md:flex-row md:items-end md:px-10">
-        <img src={photo.url} alt="Harsh Kamoriya" className="aspect-[3/4] w-56 border border-border object-cover object-[50%_22%] md:w-80" />
+        <img src={photo} alt="Harsh Kamoriya" className="aspect-[3/4] w-56 border border-border object-cover object-[50%_22%] md:w-80" />
         <div className="display text-[22vw] leading-[0.8] text-foreground md:text-[14vw]">HARSH</div>
       </section>
     );
@@ -114,7 +114,7 @@ export function IdentityReveal() {
           <span className={`${mark} -bottom-2 -left-2 border-b border-l`} />
           <span className={`${mark} -bottom-2 -right-2 border-b border-r`} />
           <div className="relative h-full w-full overflow-hidden border border-border bg-surface">
-            <img ref={img} src={photo.url} alt="" decoding="async" className="h-full w-full object-cover object-[50%_22%]" />
+            <img ref={img} src={photo} alt="" decoding="async" className="h-full w-full object-cover object-[50%_22%]" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
             <span className="absolute bottom-3 left-3 font-mono text-[10px] tracking-[0.15em] text-foreground/80">FIG.01</span>
           </div>

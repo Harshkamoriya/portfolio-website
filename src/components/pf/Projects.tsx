@@ -1,7 +1,7 @@
 import { Shot } from "./Shot";
-import verviq from "@/assets/verviq.png.asset.json";
-import gitsaathi from "@/assets/gitsaathi.png.asset.json";
-import aeroguide from "@/assets/aeroguide.png.asset.json";
+import verviq from "@/assets/verviq.png";
+import gitsaathi from "@/assets/gitsaathi.png";
+import aeroguide from "@/assets/aeroguide.png";
 import { useScrollProgress, useInView } from "./hooks";
 
 const vSteps = [
@@ -36,7 +36,7 @@ function Verviq() {
                 <span key={t}>/{t}</span>
               ))}
             </div>
-            <Shot src={verviq.url} alt="Verviq interview platform landing screen" label="VERVIQ://APP" className="mt-8 hidden max-w-xs md:block" />
+            <Shot src={verviq} alt="Verviq interview platform landing screen" label="VERVIQ://APP" className="mt-8 hidden max-w-xs md:block" />
           </div>
           <div className="relative md:col-span-6 md:col-start-7">
             <div className="absolute bottom-0 left-[11px] top-0 w-px bg-border" />
@@ -71,7 +71,7 @@ function GitSaathi() {
     <div className="border-y border-border bg-surface">
       <div ref={ref} className="mx-auto grid max-w-[1600px] gap-12 px-6 py-32 md:grid-cols-12 md:px-10">
         <div className="space-y-6 md:col-span-7 md:order-2">
-          <Shot src={gitsaathi.url} alt="GitSaathi landing screen" label="GITSAATHI://APP" />
+          <Shot src={gitsaathi} alt="GitSaathi landing screen" label="GITSAATHI://APP" />
           <div className="border border-border bg-background font-mono text-sm">
             <div className="flex items-center justify-between border-b border-border px-4 py-3 text-[11px] text-faint">
               <span>~/gitsaathi — zsh</span>
@@ -122,7 +122,7 @@ function AeroGuide() {
           graceful fallbacks.
         </p>
       </div>
-      <Shot src={aeroguide.url} alt="AeroGuide airport companion landing screen" label="AEROGUIDE://GATE" className="mt-14 md:ml-auto md:w-1/2" />
+      <Shot src={aeroguide} alt="AeroGuide airport companion landing screen" label="AEROGUIDE://GATE" className="mt-14 md:ml-auto md:w-1/2" />
       {/* departures board */}
       <div className="mt-14 border border-border font-mono">
         <div className="grid grid-cols-12 border-b border-border px-5 py-3 text-[10px] tracking-[0.2em] text-faint">

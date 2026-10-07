@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import photo from "@/assets/harsh.png.asset.json";
+import photo from "@/assets/harsh.png";
 
 /** Hero portrait: editorial plate with crop marks. On desktop it drifts up and
  *  gains colour as the hero scrolls away; static on mobile / reduced motion. */
@@ -41,7 +41,7 @@ export function Portrait() {
       <span className={`${mark} -bottom-1.5 -right-1.5 border-b border-r`} />
       <div className="relative overflow-hidden border border-border bg-surface">
         <img
-          src={photo.url}
+          src={photo}
           alt="Harsh Kamoriya"
           width={160}
           height={213}
