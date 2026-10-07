@@ -36,7 +36,21 @@ function Verviq() {
                 <span key={t}>/{t}</span>
               ))}
             </div>
-            <Shot src={verviq} alt="Verviq interview platform landing screen" label="VERVIQ://APP" className="mt-8 hidden max-w-xs md:block" />
+            <a
+              href="https://verviq-frfl.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-block font-mono text-[11px] tracking-[0.15em] text-signal transition-opacity hover:opacity-70"
+            >
+              VIEW LIVE ↗
+            </a>
+            <Shot
+              src={verviq}
+              alt="Verviq interview platform landing screen"
+              label="VERVIQ://APP"
+              href="https://verviq-frfl.vercel.app/"
+              className="mt-8 hidden max-w-xs md:block"
+            />
           </div>
           <div className="relative md:col-span-6 md:col-start-7">
             <div className="absolute bottom-0 left-[11px] top-0 w-px bg-border" />
@@ -71,7 +85,12 @@ function GitSaathi() {
     <div className="border-y border-border bg-surface">
       <div ref={ref} className="mx-auto grid max-w-[1600px] gap-12 px-6 py-32 md:grid-cols-12 md:px-10">
         <div className="space-y-6 md:col-span-7 md:order-2">
-          <Shot src={gitsaathi} alt="GitSaathi landing screen" label="GITSAATHI://APP" />
+          <Shot
+            src={gitsaathi}
+            alt="GitSaathi landing screen"
+            label="GITSAATHI://APP"
+            href="https://vercel.com/harsh-kamoriyas-projects/git-saathi"
+          />
           <div className="border border-border bg-background font-mono text-sm">
             <div className="flex items-center justify-between border-b border-border px-4 py-3 text-[11px] text-faint">
               <span>~/gitsaathi — zsh</span>
@@ -97,6 +116,14 @@ function GitSaathi() {
             Point it at a repository. It reads the code, the commit history and even meeting recordings, and tells you
             where the real complexity lives.
           </p>
+          <a
+            href="https://vercel.com/harsh-kamoriyas-projects/git-saathi"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-block font-mono text-[11px] tracking-[0.15em] text-signal transition-opacity hover:opacity-70"
+          >
+            VIEW LIVE ↗
+          </a>
           <div className="mt-10 grid grid-cols-2 gap-px border border-border bg-border font-mono text-xs">
             {["T3 STACK", "PRISMA", "POSTGRESQL", "ASSEMBLYAI"].map((t) => (
               <div key={t} className="bg-surface px-4 py-4">{t}</div>
@@ -117,12 +144,28 @@ function AeroGuide() {
           <div className="label">CHAPTER 03 / AVIATION</div>
           <h3 className="mt-6 display text-6xl md:text-[7vw]">AEROGUIDE</h3>
         </div>
-        <p className="max-w-sm text-muted-foreground">
-          An AI airport companion that works when the terminal Wi-Fi doesn't — on-device Whisper transcription with
-          graceful fallbacks.
-        </p>
+        <div className="max-w-sm">
+          <p className="text-muted-foreground">
+            An AI airport companion that works when the terminal Wi-Fi doesn't — on-device Whisper transcription with
+            graceful fallbacks.
+          </p>
+          <a
+            href="https://aeroguide-fawn.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-block font-mono text-[11px] tracking-[0.15em] text-signal transition-opacity hover:opacity-70"
+          >
+            VIEW LIVE ↗
+          </a>
+        </div>
       </div>
-      <Shot src={aeroguide} alt="AeroGuide airport companion landing screen" label="AEROGUIDE://GATE" className="mt-14 md:ml-auto md:w-1/2" />
+      <Shot
+        src={aeroguide}
+        alt="AeroGuide airport companion landing screen"
+        label="AEROGUIDE://GATE"
+        href="https://aeroguide-fawn.vercel.app/"
+        className="mt-14 md:ml-auto md:w-1/2"
+      />
       {/* departures board */}
       <div className="mt-14 border border-border font-mono">
         <div className="grid grid-cols-12 border-b border-border px-5 py-3 text-[10px] tracking-[0.2em] text-faint">

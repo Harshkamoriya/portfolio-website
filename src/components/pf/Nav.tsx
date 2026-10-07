@@ -36,7 +36,12 @@ export function Nav() {
             </a>
           ))}
         </div>
-        <a href="#contact" className="label !text-foreground transition-colors hover:!text-signal">
+        <a
+          href="https://drive.google.com/file/d/1GPfHbkqii0XeIPmRcuo3wJK5Qb6Zrswi/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="label !text-foreground transition-colors hover:!text-signal"
+        >
           Resume ↗
         </a>
       </nav>

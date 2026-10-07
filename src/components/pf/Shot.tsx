@@ -1,7 +1,19 @@
 /** Uniform product-screenshot frame: 16:10, hairline border, mono caption bar. */
-export function Shot({ src, alt, label, className = "" }: { src: string; alt: string; label: string; className?: string }) {
-  return (
-    <figure className={`group border border-border bg-background ${className}`}>
+export function Shot({
+  src,
+  alt,
+  label,
+  href,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  label: string;
+  href?: string;
+  className?: string;
+}) {
+  const frame = (
+    <figure className="group border border-border bg-background">
       <div className="flex items-center justify-between border-b border-border px-3 py-2 font-mono text-[10px] tracking-[0.18em] text-faint">
         <span>{label}</span>
         <span className="flex gap-1">
@@ -21,5 +33,11 @@ export function Shot({ src, alt, label, className = "" }: { src: string; alt: st
         <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_var(--line)]" />
       </div>
     </figure>
+  );
+  if (!href) return <div className={className}>{frame}</div>;
+  return (
+    <a href={href} target="_blank" rel="noreferrer" className={`block ${className}`}>
+      {frame}
+    </a>
   );
 }

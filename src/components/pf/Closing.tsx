@@ -160,10 +160,10 @@ export function Leadership() {
 
 export function Contact() {
   const links = [
-    ["GitHub", "https://github.com/"],
-    ["LinkedIn", "https://linkedin.com/"],
-    ["Email", "mailto:hello@example.com"],
-    ["Resume", "#"],
+    ["GitHub", "https://github.com/Harshkamoriya"],
+    ["LinkedIn", "https://www.linkedin.com/in/harsh-kamoriya/"],
+    ["Email", "mailto:harshkamoriya@gmail.com"],
+    ["Resume", "https://drive.google.com/file/d/1GPfHbkqii0XeIPmRcuo3wJK5Qb6Zrswi/view?usp=sharing"],
   ];
   return (
     <section id="contact" className="relative overflow-hidden border-t border-border grid-bg">
@@ -180,7 +180,7 @@ export function Contact() {
         <div>
           <div className="grid border-t border-border md:grid-cols-4">
             {links.map(([l, h]) => (
-              <a key={l} href={h} target={h?.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="group flex items-center justify-between border-b border-border py-6 text-2xl transition-colors hover:text-signal md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0">
+              <a key={l} href={h} target={h.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="group flex items-center justify-between border-b border-border py-6 text-2xl transition-colors hover:text-signal md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0">
                 {l}
                 <span className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
               </a>
